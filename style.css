@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    width: 90%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+#hangman-image,
+#word-guesses,
+#game-status,
+#keyboard,
+#reset {
+    width: 100%;
+    text-align: center;
+    min-height: 30px;
+    padding: 5px 0;
+}
+
+#word-guesses {
+    font-size: 1.4em;
+    letter-spacing: 0.4em;
+    min-height: 40px;
+}
+
+#keyboard {
+    min-height: 50px;
+}
+
+
+@media (max-width: 600px) {
+     h1 {
+        font-size: 1.5em;
+     }
+    #word-guesses {
+        font-size: 1.2em;
+        letter-spacing: 0.3em;
+    }
+}
