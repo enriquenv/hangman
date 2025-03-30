@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+    background-color: white;
     padding: 10px;
 }
 
@@ -24,12 +24,13 @@ body {
     max-width: 500px;
     background-color: white;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px lightgrey;
 }
 
 h1 {
     font-size: 1.8em;
     margin-bottom: 5px;
+    color: black;
 }
 
 #hangman-image,
@@ -43,16 +44,60 @@ h1 {
     padding: 5px 0;
 }
 
+#hangman-img {
+    max-width: 100%;
+    max-height: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 #word-guesses {
     font-size: 1.4em;
     letter-spacing: 0.4em;
     min-height: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: black;
+}
+
+#game-status {
+    color: dimgrey;
+    min-height: 20px;
 }
 
 #keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 5px;
+    padding: 10px;
+    max-width: 480px;
+    margin: 0 auto;
     min-height: 50px;
+    line-height: 1.5;
 }
 
+.key {
+    width: 40px;
+    height: 40px;
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+    border: 1px solid grey;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    margin-bottom: 8px;
+}
+
+.key:hover {
+    background-color: lightgrey;
+}
 
 @media (max-width: 600px) {
      h1 {
@@ -62,4 +107,27 @@ h1 {
         font-size: 1.2em;
         letter-spacing: 0.3em;
     }
+     #keyboard {
+        gap: 5px 4px;
+        padding: 5px;
+        max-width: 100%;
+    }
+    .key {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 400px) {
+     .key {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8em;
+        margin-bottom: 4px;
+    }
+     #keyboard {
+        gap: 4px 3px;
+     }
 }
