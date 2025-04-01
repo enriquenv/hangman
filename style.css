@@ -99,6 +99,22 @@ h1 {
     background-color: lightgrey;
 }
 
+#reset-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+    border: 1px solid grey;
+    background-color: lightseagreen;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#reset-button:hover {
+    background-color: lightgreen;
+}
+
 @media (max-width: 600px) {
      h1 {
         font-size: 1.5em;
